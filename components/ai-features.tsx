@@ -51,13 +51,13 @@ export function AIFeatures() {
           {aiFeatures.map((f) => (
             <div
               key={f.title}
-              className="group relative overflow-hidden rounded-2xl border border-border/60 bg-card/70 p-7 backdrop-blur-md transition-all hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card p-7 shadow-sm transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-md hover:shadow-primary/10"
             >
               <div className="flex items-start justify-between">
-                <span className="flex size-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-accent text-primary-foreground shadow-lg shadow-primary/20">
+                <span className="flex size-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-accent text-primary-foreground shadow-sm shadow-primary/20">
                   <f.icon className="size-6" />
                 </span>
-                <span className="rounded-full border border-border/60 bg-background/60 px-2.5 py-1 text-[11px] font-medium text-muted-foreground">
+                <span className="rounded-full border border-border bg-secondary px-2.5 py-1 text-[11px] font-medium text-secondary-foreground">
                   {f.tag}
                 </span>
               </div>

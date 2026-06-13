@@ -29,11 +29,11 @@ export function DashboardPreview() {
           </p>
         </div>
 
-        <div className="mt-14 rounded-3xl border border-border/60 bg-card/70 p-4 shadow-xl shadow-primary/5 backdrop-blur-md sm:p-6">
+        <div className="mt-14 rounded-3xl border border-border bg-card p-4 shadow-lg shadow-primary/5 sm:p-6">
           {/* stat row */}
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((s) => (
-              <div key={s.label} className="rounded-2xl border border-border/60 bg-background p-4">
+              <div key={s.label} className="rounded-2xl border border-border bg-background p-4 shadow-sm">
                 <div className="flex items-center justify-between">
                   <span className="flex size-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
                     <s.icon className="size-4.5" />
@@ -55,7 +55,7 @@ export function DashboardPreview() {
 
           <div className="mt-4 grid gap-4 lg:grid-cols-3">
             {/* big chart */}
-            <div className="rounded-2xl border border-border/60 bg-background p-5 lg:col-span-2">
+            <div className="rounded-2xl border border-border bg-background p-5 shadow-sm lg:col-span-2">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-semibold text-foreground">Monthly Occupancy</p>
@@ -77,7 +77,7 @@ export function DashboardPreview() {
             </div>
 
             {/* block occupancy */}
-            <div className="rounded-2xl border border-border/60 bg-background p-5">
+            <div className="rounded-2xl border border-border bg-background p-5 shadow-sm">
               <p className="text-sm font-semibold text-foreground">Occupancy by Block</p>
               <div className="mt-5 space-y-4">
                 {blocks.map((b) => (

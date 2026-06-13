@@ -20,7 +20,7 @@ export function StudentPortal() {
 
         <div className="mt-14 grid gap-5 lg:grid-cols-2">
           {/* Room info */}
-          <div className="rounded-2xl border border-border/60 bg-card/70 p-6 backdrop-blur-sm">
+          <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
             <div className="flex items-center gap-3">
               <span className="flex size-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
                 <BedDouble className="size-5" />
@@ -37,7 +37,7 @@ export function StudentPortal() {
                 ["Bed", "Window · #2"],
                 ["Roommate", "J. Patel"],
               ].map(([k, v]) => (
-                <div key={k} className="rounded-xl border border-border/60 bg-background p-3">
+                <div key={k} className="rounded-xl border border-border bg-background p-3">
                   <dt className="text-xs text-muted-foreground">{k}</dt>
                   <dd className="mt-0.5 font-medium text-foreground">{v}</dd>
                 </div>
@@ -46,7 +46,7 @@ export function StudentPortal() {
           </div>
 
           {/* Leave requests */}
-          <div className="rounded-2xl border border-border/60 bg-card/70 p-6 backdrop-blur-sm">
+          <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
             <div className="flex items-center gap-3">
               <span className="flex size-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
                 <CalendarCheck className="size-5" />
@@ -62,7 +62,7 @@ export function StudentPortal() {
                 { reason: "Medical leave", date: "Oct 18", status: "Approved", ok: true },
                 { reason: "Weekend outing", date: "Dec 2", status: "Pending", ok: false },
               ].map((l) => (
-                <li key={l.reason} className="flex items-center justify-between rounded-xl border border-border/60 bg-background p-3">
+                <li key={l.reason} className="flex items-center justify-between rounded-xl border border-border bg-background p-3">
                   <div>
                     <p className="font-medium text-foreground">{l.reason}</p>
                     <p className="text-xs text-muted-foreground">{l.date}</p>
@@ -81,7 +81,7 @@ export function StudentPortal() {
           </div>
 
           {/* Complaints */}
-          <div className="rounded-2xl border border-border/60 bg-card/70 p-6 backdrop-blur-sm">
+          <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
             <div className="flex items-center gap-3">
               <span className="flex size-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
                 <MessageSquareWarning className="size-5" />
@@ -96,7 +96,7 @@ export function StudentPortal() {
                 { title: "Leaking tap in bathroom", cat: "Plumbing", status: "In progress" },
                 { title: "Wi-Fi not working", cat: "Network", status: "Resolved" },
               ].map((c) => (
-                <li key={c.title} className="rounded-xl border border-border/60 bg-background p-3">
+                <li key={c.title} className="rounded-xl border border-border bg-background p-3">
                   <div className="flex items-center justify-between">
                     <p className="font-medium text-foreground">{c.title}</p>
                     <span className="rounded-full bg-secondary px-2.5 py-0.5 text-xs font-medium text-secondary-foreground">
@@ -110,7 +110,7 @@ export function StudentPortal() {
           </div>
 
           {/* QR Gate pass */}
-          <div className="flex flex-col rounded-2xl border border-border/60 bg-gradient-to-br from-primary to-accent p-6 text-primary-foreground">
+          <div className="flex flex-col rounded-2xl border border-transparent bg-gradient-to-br from-primary to-accent p-6 text-primary-foreground shadow-md shadow-primary/20">
             <div className="flex items-center gap-3">
               <span className="flex size-10 items-center justify-center rounded-xl bg-primary-foreground/15">
                 <QrCode className="size-5" />

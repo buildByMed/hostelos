@@ -17,7 +17,7 @@ const columns = [
 
 export function Footer() {
   return (
-    <footer id="contact" className="border-t border-border/60 px-4 py-14">
+    <footer id="contact" className="border-t border-border bg-secondary/40 px-4 py-14">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 md:grid-cols-[1.5fr_repeat(3,1fr)]">
           <div>
@@ -50,7 +50,7 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/60 pt-6 text-sm text-muted-foreground sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-6 text-sm text-muted-foreground sm:flex-row">
           <p>© {new Date().getFullYear()} HostelOS AI. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <a href="#" className="transition-colors hover:text-foreground">Privacy</a>

@@ -4,19 +4,23 @@ import { Button } from "@/components/ui/button"
 export function Hero() {
   return (
     <section className="relative overflow-hidden px-4 pb-20 pt-36 md:pt-44">
-      {/* subtle gradient backdrop */}
+      {/* soft, friendly gradient backdrop */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[600px] bg-gradient-to-b from-primary/5 via-accent/5 to-transparent"
+        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[640px] bg-gradient-to-b from-primary/8 via-accent/5 to-transparent"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-24 -z-10 size-[480px] -translate-x-1/2 rounded-full bg-primary/10 blur-3xl"
+        className="pointer-events-none absolute -left-20 top-40 -z-10 size-[420px] rounded-full bg-accent/10 blur-3xl"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-24 top-20 -z-10 size-[460px] rounded-full bg-primary/10 blur-3xl"
       />
 
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
         <div className="flex flex-col items-start text-left">
-          <span className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/70 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur">
+          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-secondary-foreground shadow-sm">
             <Sparkles className="size-3.5 text-primary" />
             AI-powered hostel management
           </span>
@@ -31,19 +35,15 @@ export function Hero() {
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button
-              size="lg"
-              className="rounded-xl"
-              render={<a href="#student-portal" />}
-            >
+            <Button size="lg" className="rounded-xl shadow-sm shadow-primary/20" render={<a href="#student-portal" />}>
               View Student Portal
               <ArrowRight className="size-4" />
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="rounded-xl border-border bg-background/60"
-              render={<a href="#dashboard" />}
+              className="rounded-xl border-border bg-card"
+              render={<a href="/dashboard" />}
             >
               Explore Dashboard
             </Button>
@@ -78,14 +78,14 @@ function HeroMockup() {
     <div className="relative">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-6 -top-6 -z-10 size-40 rounded-full bg-accent/15 blur-2xl"
+        className="pointer-events-none absolute -right-6 -top-6 -z-10 size-40 rounded-full bg-warm/20 blur-2xl"
       />
-      <div className="rounded-3xl border border-border/60 bg-card/80 p-2 shadow-2xl shadow-primary/10 backdrop-blur-xl">
-        <div className="rounded-2xl border border-border/60 bg-background">
+      <div className="rounded-3xl border border-border bg-card p-2 shadow-xl shadow-primary/10">
+        <div className="rounded-[1.25rem] border border-border bg-background">
           {/* window bar */}
-          <div className="flex items-center gap-1.5 border-b border-border/60 px-4 py-3">
+          <div className="flex items-center gap-1.5 border-b border-border px-4 py-3">
             <span className="size-2.5 rounded-full bg-destructive/40" />
-            <span className="size-2.5 rounded-full bg-accent/40" />
+            <span className="size-2.5 rounded-full bg-warm/60" />
             <span className="size-2.5 rounded-full bg-primary/40" />
             <span className="ml-3 text-xs font-medium text-muted-foreground">HostelOS — Admin Dashboard</span>
           </div>
@@ -102,12 +102,14 @@ function HeroMockup() {
             {/* stat cards */}
             <div className="grid grid-cols-3 gap-3">
               {[
-                { icon: BedDouble, label: "Occupancy", value: "94%", tint: "text-primary" },
-                { icon: Bell, label: "Open tickets", value: "12", tint: "text-accent" },
-                { icon: QrCode, label: "Gate passes", value: "38", tint: "text-primary" },
+                { icon: BedDouble, label: "Occupancy", value: "94%", tint: "text-primary", bg: "bg-primary/10" },
+                { icon: Bell, label: "Open tickets", value: "12", tint: "text-accent", bg: "bg-accent/10" },
+                { icon: QrCode, label: "Gate passes", value: "38", tint: "text-warm-foreground", bg: "bg-warm/20" },
               ].map((s) => (
-                <div key={s.label} className="rounded-xl border border-border/60 bg-card p-3">
-                  <s.icon className={`size-4 ${s.tint}`} />
+                <div key={s.label} className="rounded-xl border border-border bg-card p-3 shadow-sm">
+                  <span className={`flex size-7 items-center justify-center rounded-lg ${s.bg}`}>
+                    <s.icon className={`size-4 ${s.tint}`} />
+                  </span>
                   <p className="mt-2 text-lg font-semibold text-foreground">{s.value}</p>
                   <p className="text-[11px] text-muted-foreground">{s.label}</p>
                 </div>
@@ -115,7 +117,7 @@ function HeroMockup() {
             </div>
 
             {/* chart */}
-            <div className="rounded-xl border border-border/60 bg-card p-4">
+            <div className="rounded-xl border border-border bg-card p-4 shadow-sm">
               <div className="flex items-center justify-between">
                 <p className="text-xs font-medium text-foreground">Weekly check-ins</p>
                 <span className="inline-flex items-center gap-1 text-[11px] font-medium text-primary">
@@ -124,7 +126,11 @@ function HeroMockup() {
               </div>
               <div className="mt-4 flex h-24 items-end gap-2">
                 {[40, 65, 50, 80, 60, 95, 72].map((h, i) => (
-                  <div key={i} className="flex-1 rounded-t-md bg-gradient-to-t from-primary/30 to-primary" style={{ height: `${h}%` }} />
+                  <div
+                    key={i}
+                    className="flex-1 rounded-t-md bg-gradient-to-t from-primary/30 to-primary"
+                    style={{ height: `${h}%` }}
+                  />
                 ))}
               </div>
             </div>

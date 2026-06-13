@@ -17,7 +17,7 @@ export function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between rounded-2xl border border-border/60 bg-background/70 px-4 py-3 shadow-sm backdrop-blur-xl md:px-6">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between rounded-2xl border border-border bg-card/95 px-4 py-3 shadow-sm backdrop-blur-sm md:px-6">
         <a href="#" className="flex items-center gap-2">
           <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
             <Hexagon className="size-5" />
@@ -64,7 +64,7 @@ export function Navbar() {
       </nav>
 
       {open && (
-        <div className="mx-auto mt-2 max-w-6xl rounded-2xl border border-border/60 bg-background/90 p-3 shadow-sm backdrop-blur-xl md:hidden">
+        <div className="mx-auto mt-2 max-w-6xl rounded-2xl border border-border bg-card p-3 shadow-md md:hidden">
           <div className="flex flex-col">
             {links.map((link) => (
               <a
