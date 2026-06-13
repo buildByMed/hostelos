@@ -48,7 +48,7 @@ export function Navbar() {
           >
             Sign in
           </Button>
-          <Button size="sm" className="rounded-lg" render={<a href="#dashboard" />}>
+          <Button size="sm" className="rounded-lg" render={<a href="/dashboard" />}>
             Get started
           </Button>
         </div>
@@ -76,7 +76,7 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
-            <Button size="sm" className="mt-2 rounded-lg" render={<a href="#dashboard" />}>
+            <Button size="sm" className="mt-2 rounded-lg" render={<a href="/dashboard" />}>
               Get started
             </Button>
           </div>
