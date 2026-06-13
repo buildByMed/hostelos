@@ -1,33 +1,123 @@
-# hostelos
+# HostelOS AI
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+HostelOS AI is a modern hostel management platform designed to streamline hostel operations for students, wardens, and administrators through a centralized digital system.
 
-## Built with v0
+## Problem Statement
 
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
+Traditional hostel management relies on paper registers, scattered WhatsApp communication, and manual processes for complaints, leave requests, room allocation, and visitor management. This leads to inefficiencies, poor transparency, and delayed issue resolution.
 
-[Continue working on v0 →](https://v0.app/chat/projects/prj_IWD7CTRRdbbkfuZ5DaIGSwofYZyF)
+## Solution
+
+HostelOS AI provides a unified platform for:
+
+* Student Registration
+* Room Allocation
+* Complaint Management
+* Leave Requests
+* Visitor Management
+* Fee Tracking
+* QR-based Gate Passes
+* AI-powered Student Assistant
+* Hostel Analytics Dashboard
+
+## Key Features
+
+### Student Portal
+
+* View room details
+* Submit complaints
+* Apply for leave
+* Access fee information
+* Generate digital gate passes
+* Chat with AI Hostel Assistant
+
+### Admin Portal
+
+* Manage students and rooms
+* Approve leave requests
+* Track complaints
+* Monitor visitors
+* View hostel analytics
+* Generate reports
+
+### AI Features
+
+* AI Complaint Classification
+* AI Hostel Assistant
+* Occupancy Analytics
+* Crowd Detection Alerts
+
+## Tech Stack
+
+Frontend:
+
+* Next.js
+* TypeScript
+* Tailwind CSS
+* shadcn/ui
+
+Backend:
+
+* Next.js API Routes
+
+Database:
+
+* PostgreSQL / Supabase
+
+AI:
+
+* Google Gemini API
+
+Deployment:
+
+* Vercel
 
 ## Getting Started
 
-First, run the development server:
+### Installation
+
+```bash
+git clone <repository-url>
+cd hostelos-ai
+
+npm install
+
+npm run dev
+```
+
+### Environment Variables
+
+Create a `.env.local` file:
+
+```env
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
+
+GEMINI_API_KEY=your_gemini_api_key
+```
+
+### Run Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
 
-## Learn More
+## Future Scope
 
-To learn more, take a look at the following resources:
+* Face Recognition Based Entry
+* Mobile Application
+* Predictive Hostel Analytics
+* Smart Maintenance Scheduling
+* Occupancy Forecasting
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
+## Team
+
+Built for WebForge Hackathon 2026.
